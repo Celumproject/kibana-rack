@@ -34,7 +34,7 @@ module Kibana
             proxy_request.headers['Content-Type'] = 'application/json'
             proxy_request.params = env['rack.request.query_hash']
             proxy_request.body = request.body.read if [:post, :put].include?(proxy_method)
-            proxy_request.host = "Host localhost:3000"
+            proxy_request.host = "Host #{request.host}"
           end
 
           [proxy_response.status, proxy_response.headers, proxy_response.body]
