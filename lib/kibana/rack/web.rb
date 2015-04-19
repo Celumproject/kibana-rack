@@ -5,7 +5,7 @@ module Kibana
       register Sinatra::MultiRoute
 
       set :root, File.expand_path('../../../../web', __FILE__)
-      set :public_folder, -> { "#{root}/assets" }
+      set :public_folder, -> { "#{root}/assets/public" }
       set :views, -> { "#{root}/views" }
 
       set :elasticsearch_host, -> { Kibana.elasticsearch_host }
