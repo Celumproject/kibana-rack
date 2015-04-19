@@ -5,9 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="kibana/styles/theme/elk.ico">
+	
+    <base href="/kibana/">
+	
+    <link rel="shortcut icon" href="styles/theme/elk.ico">
     <title>Kibana 4</title>
-    <link rel="stylesheet" href="kibana/styles/main.css?_b=6004">
+    <link rel="stylesheet" href="styles/main.css?_b=6004">
 
   </head>
   <body kibana ng-class="'application-' + activeApp.id">
@@ -15,7 +18,7 @@
     <div class="row">
       <div class="col-md-offset-4 col-md-4 page-header initial-load">
         <center>
-          <img width="128" src="kibana/images/initial_load.gif">
+          <img width="128" src="images/initial_load.gif">
           <h1>
             <strong>Kibana</strong>
             <small id="cache-message">is loading. Give me a moment here. I'm loading a whole bunch of code. Don't worry, all this good stuff will be cached up for next time!</small>
@@ -30,8 +33,8 @@
       window.KIBANA_COMMIT_SHA='b2861167bf39066c91556fc03298c38b89ad28a3';
     </script>
 
-    <script src="kibana/bower_components/requirejs/require.js?_b=6004"></script>
-    <script src="kibana/require.config.js?_b=6004"></script>
+    <script src="bower_components/requirejs/require.js?_b=6004"></script>
+    <script src="require.config.js?_b=6004"></script>
     <script>
       var showCacheMessage = location.href.indexOf('?embed') < 0 && location.href.indexOf('&embed') < 0;
       if (!showCacheMessage) document.getElementById('cache-message').style.display = 'none';
