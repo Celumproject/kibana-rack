@@ -39,10 +39,7 @@
       var showCacheMessage = location.href.indexOf('?embed') < 0 && location.href.indexOf('&embed') < 0;
       if (!showCacheMessage) document.getElementById('cache-message').style.display = 'none';
 
-      if (window.KIBANA_BUILD_NUM.substr(0, 2) !== '@@') {
-        // only cache bust if this is really the build number
-        require.config({ urlArgs: '_b=' + window.KIBANA_BUILD_NUM });
-      }
+
 
       require(['kibana'], function (kibana) { kibana.init(); });
     </script>
